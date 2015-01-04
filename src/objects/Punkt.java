@@ -1,9 +1,5 @@
 package objects;
 
-import java.util.Set;
-
-import ch.ksimlee.it.spaceinvaders.log.Log;
-import objects.RenderObject;
 import pacman.Game;
 
 public class Punkt extends ImageObject {

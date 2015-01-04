@@ -147,6 +147,10 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 					switch (collision.getType()) {
 					case "point": Game.getObjectsToRemove().add(collision);
 						//Add points to the score
+					
+					case "wall": 
+						
+					case "ghost": 
 					}
 					break;
 				}

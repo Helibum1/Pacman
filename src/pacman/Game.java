@@ -9,6 +9,7 @@ import pacman.InputHandler;
 import objects.Pacman;
 import objects.Punkt;
 import objects.RenderObject;
+import objects.Wall;
 
 public class Game implements Runnable {
 	
@@ -44,6 +45,8 @@ private static final int ACTIONS_PER_SECOND = 30;
 		objectsToRender.add(pacman);
 		
 		objectsToRender.add(new Punkt(500,600));
+		
+		objectsToRender.add(new Wall(300,500));
 		
 		Log.info("Game initialized");
 		
