@@ -6,6 +6,7 @@ import java.util.Set;
 import ch.ksimlee.it.spaceinvaders.log.Log;
 
 import pacman.InputHandler;
+import objects.Background;
 import objects.Pacman;
 import objects.Punkt;
 import objects.RenderObject;
@@ -46,7 +47,14 @@ private static final int ACTIONS_PER_SECOND = 30;
 		
 		objectsToRender.add(new Punkt(500,600));
 		
-		objectsToRender.add(new Wall(300,500));
+		objectsToRender.add(new Wall(0,0,25,1000));
+		objectsToRender.add(new Wall(0,0,1000,25));
+		objectsToRender.add(new Wall(75,75,25,200));
+		objectsToRender.add(new Wall(325,75,25,250));
+		objectsToRender.add(new Wall(975,0,1200,25));
+		objectsToRender.add(new Wall(150,100,250,25));
+		
+		objectsToRender.add(new Background(0,0));
 		
 		Log.info("Game initialized");
 		
