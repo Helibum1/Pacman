@@ -43,4 +43,8 @@ public class Pacman extends ImageObject {
 			move(0, -speed, game.getObjectsToRender());
 		}
 	}
+	
+	public String getType() {
+		return "pacman";
+	}
 }

@@ -1,5 +1,7 @@
 package objects;
 
+import java.util.Set;
+
 import ch.ksimlee.it.spaceinvaders.log.Log;
 import objects.RenderObject;
 import pacman.Game;
@@ -20,13 +22,10 @@ public class Punkt extends ImageObject {
 	@Override
 	public void update(Game game) {
 		
-		RenderObject collision = move(0, 0, game.getObjectsToRender());
-		
-		if (collision != null) {
-				game.getObjectsToRemove().add(collision);
-				game.getObjectsToRemove().add(this);
-				Log.info("ASDFASDFASDF");
-		}
+	}
+	
+	public String getType() {
+		return "point";
 	}
 	
 }

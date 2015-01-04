@@ -23,11 +23,11 @@ private static final int ACTIONS_PER_SECOND = 30;
 		return objectsToAdd;
 	}
 
-	public Set<RenderObject> getObjectsToRemove() {
+	public static Set<RenderObject> getObjectsToRemove() {
 		return objectsToRemove;
 	}
 
-	private final Set<RenderObject> objectsToRemove = new HashSet<RenderObject>();
+	private final static Set<RenderObject> objectsToRemove = new HashSet<RenderObject>();
 
 	
 	/** The handler that should receive the user input. */

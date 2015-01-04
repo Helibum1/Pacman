@@ -144,6 +144,10 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 					
 					// Exit the moving loop, since we have a collision and we
 					// cannot move further.
+					switch (collision.getType()) {
+					case "point": Game.getObjectsToRemove().add(collision);
+						//Add points to the score
+					}
 					break;
 				}
 				
@@ -170,7 +174,7 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 	 * 
 	 * @param other
 	 *            The other object.
-	 * @return True, iff the objects overlap.
+	 * @return True, if the objects overlap.
 	 */
 	private boolean overlapsWithObject(RenderObject other) {
 		return (x < other.x + other.getWidth() &&
@@ -260,6 +264,10 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 
 	public void setzIndex(int zIndex) {
 		this.zIndex = zIndex;
+	}
+
+	public String getType() {
+		return null;
 	}
 
 }
