@@ -1,3 +1,8 @@
+/**
+ * This class was creadted by David Stolz
+ * Username on Git: stolzda
+ */
+
 package ch.ksimlee.it.spaceinvaders.log;
 
 /**
