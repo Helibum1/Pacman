@@ -54,7 +54,7 @@ public class InputHandler {
 	 * 
 	 * @param keyCode
 	 *            The keyCode to check.
-	 * @return True, iff the key is pressed.
+	 * @return True, if the key is pressed.
 	 */
 	public boolean isKeyPressed(int keyCode) {
 		
