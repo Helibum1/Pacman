@@ -10,7 +10,7 @@ public class Pacman extends ImageObject {
 	
 	private static final int zIndex = 100;
 	
-	private int speed = 8;
+	private int speed = 6;
 	
 	private String LastMove = "left";
 	
