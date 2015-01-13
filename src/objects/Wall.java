@@ -6,14 +6,12 @@ import java.awt.Graphics;
 		
 		private static final int zIndex = 100;
 		
-		int Width;
+		int Width = 25;
 		
-		int Height;
+		int Height = 25;
 		
-		public Wall(int x, int y, int h, int w) {
+		public Wall(int x, int y) {
 			super(x, y, zIndex, true);
-			this.Width = w;
-			this.Height = h;
 		}
 
 		@Override

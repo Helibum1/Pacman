@@ -17,7 +17,7 @@ public class Game implements Runnable {
 private static final int ACTIONS_PER_SECOND = 30;
 	
 	/** A list of all objects that can be rendered. */
-	private final Set<RenderObject> objectsToRender = new HashSet<RenderObject>();
+	private final static Set<RenderObject> objectsToRender = new HashSet<RenderObject>();
 	
 	private final Set<RenderObject> objectsToAdd = new HashSet<RenderObject>();
 
@@ -44,8 +44,7 @@ private static final int ACTIONS_PER_SECOND = 30;
 		pacman = new Pacman(200, 200);
 		
 		objectsToRender.add(pacman);
-		
-		
+		new LevelInput(this);
 		
 		/*
 		*objectsToRender.add(new Punkt(500,600));
@@ -108,6 +107,11 @@ private static final int ACTIONS_PER_SECOND = 30;
 
 	public InputHandler getInputHandler() {
 		return inputHandler;
+	}
+
+	public static void addWalls(int x, int y) {
+		objectsToRender.add(new Wall(x,y));
+		
 	}
 	
 }
