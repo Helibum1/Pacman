@@ -11,7 +11,8 @@ public class LevelInput {
     public LevelInput(Game game) { 
         String sTemp; 
         int i,j; 
-        wallkoords = new int [40][40]; 
+        int Size = 40;
+        wallkoords = new int [Size][Size]; 
         
         try { 
             // Datei oeffnen 
@@ -34,8 +35,8 @@ public class LevelInput {
         } catch (java.io.IOException e) { 
             e.printStackTrace();
         } 
-        for(i=0;i<40;i++){
-        	for(j=0;j<40;j++){
+        for(i=0;i<Size;i++){
+        	for(j=0;j<Size;j++){
         		if(wallkoords [i][j] == 1){
         			game.getObjectsToRender().add(new Wall(j*25,i*25));
         		}
