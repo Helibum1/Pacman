@@ -150,7 +150,7 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 					
 					case "wall": 
 						
-					case "ghost": Game
+					case "ghost": 
 					}
 					break;
 				}

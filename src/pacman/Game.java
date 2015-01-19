@@ -38,7 +38,6 @@ private static final int ACTIONS_PER_SECOND = 30;
 	
 	private final Pacman pacman;
 	private final Ghost ghost;
-	private final Punkt point;
 	
 	public Game(){
 		
@@ -46,7 +45,6 @@ private static final int ACTIONS_PER_SECOND = 30;
 		
 		pacman = new Pacman(475, 650);
 		ghost = new Ghost(475, 650);
-		point = new Punkt(525, 650);
 		
 		objectsToRender.add(pacman);
 		objectsToRender.add(ghost);
