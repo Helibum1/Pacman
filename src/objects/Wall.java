@@ -1,6 +1,6 @@
 package objects;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 	public class Wall extends ImageObject {
 		
@@ -31,7 +31,8 @@ import java.awt.Graphics;
 		@Override
 		public void render(Graphics g) {
 			// TODO Auto-generated method stub
-			
+			g.setColor(Color.blue);
+			g.fillRect(x, y, 25, 25);
 		}
 		
 		public String getType(){

@@ -4,7 +4,7 @@ import pacman.Game;
 
 public class Ghost extends ImageObject {
 	
-	private static final String PicPath = "Punkt.png";
+	private static final String PicPath = "Ghost.png";
 	
 	private static final int zIndex = 100;
 	
