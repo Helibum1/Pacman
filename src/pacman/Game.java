@@ -7,6 +7,7 @@ import ch.ksimlee.it.spaceinvaders.log.Log;
 
 import pacman.InputHandler;
 import objects.Background;
+import objects.Ghost;
 import objects.Pacman;
 import objects.Punkt;
 import objects.RenderObject;
@@ -36,12 +37,15 @@ private static final int ACTIONS_PER_SECOND = 30;
 	private final InputHandler inputHandler = new InputHandler();
 	
 	private final Pacman pacman;
+	private final Ghost ghost;
 	
 	public Game(){
 		
 		Log.info("Starting a game with " + ACTIONS_PER_SECOND + " actions/second.");
 		
 		pacman = new Pacman(475, 650);
+		
+		ghost = new Ghost(475, 750);
 		
 		objectsToRender.add(pacman);
 		new LevelInput(this);

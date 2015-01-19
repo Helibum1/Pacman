@@ -21,6 +21,8 @@ public class Pacman extends ImageObject {
 	@Override
 	public void update(Game game){
 		
+		Ghost.sentCoords(x, y);
+		
 		if (game.getInputHandler().isKeyPressed(KeyEvent.VK_A) ||
 				game.getInputHandler().isKeyPressed(KeyEvent.VK_LEFT) || LastMove == "left") {
 			
