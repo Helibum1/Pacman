@@ -2,16 +2,18 @@ package objects;
 
 import java.awt.Graphics;
 
-	public class Wall extends RenderObject {
+	public class Wall extends ImageObject {
 		
 		private static final int zIndex = 100;
+		
+		private static String PicPath = "Wall.png";
 		
 		int Width = 25;
 		
 		int Height = 25;
 		
 		public Wall(int x, int y) {
-			super(x, y, zIndex, true);
+			super(x, y, zIndex, true, PicPath);
 		}
 
 		@Override
