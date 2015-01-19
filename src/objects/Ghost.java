@@ -4,7 +4,7 @@ import pacman.Game;
 
 public class Ghost extends ImageObject {
 	
-	private static final String PicPath = "Pacman.png";
+	private static final String PicPath = "Punkt.png";
 	
 	private static final int zIndex = 100;
 	
@@ -20,6 +20,7 @@ public class Ghost extends ImageObject {
 	
 	public Ghost(int x, int y){
 		super(x, y, zIndex, true, PicPath);
+		System.out.println("asdfasdfsadfsadfsadfasdfasdfasdfsadfasdfasdfsafsadfasdfasdfsadfsadf");
 		this.x = x;
 		this.y = y;
 	}
@@ -50,6 +51,10 @@ public class Ghost extends ImageObject {
 			move(0, -speed, game.getObjectsToRender());
 			y = y - speed;
 		}
+	}
+	
+	public String getType(){
+		return "ghost";
 	}
 	
 }

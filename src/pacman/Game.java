@@ -44,10 +44,10 @@ private static final int ACTIONS_PER_SECOND = 30;
 		Log.info("Starting a game with " + ACTIONS_PER_SECOND + " actions/second.");
 		
 		pacman = new Pacman(475, 650);
-		
-		ghost = new Ghost(475, 750);
+		ghost = new Ghost(100, 100);
 		
 		objectsToRender.add(pacman);
+		objectsToRender.add(ghost);
 		new LevelInput(this);
 		
 		/*

@@ -5,7 +5,7 @@ import java.awt.EventQueue;
 import pacman.Game;
 import pacman.Window;
 
-public class PacmanMain {
+public class Main {
 
 	public static void main(String[] args) {
 
