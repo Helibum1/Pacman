@@ -8,7 +8,7 @@ public class Ghost extends ImageObject {
 	
 	private static final int zIndex = 100;
 	
-	private int speed = 5;
+	private int speed = 6;
 	
 	private static int PacmanX;
 	
@@ -20,41 +20,43 @@ public class Ghost extends ImageObject {
 	
 	public Ghost(int x, int y){
 		super(x, y, zIndex, true, PicPath);
-		System.out.println("asdfasdfsadfsadfsadfasdfasdfasdfsadfasdfasdfsafsadfasdfasdfsadfsadf");
 		this.x = x;
 		this.y = y;
-	}
-	
-	public static void sentCoords(int x, int y) {
-		PacmanX = x;
-		PacmanY = y;
 	}
 
 	@Override
 	public void update(Game game){
+		thisCoords();
 		if(PacmanX > x) {
 			move(speed, 0, game.getObjectsToRender());
-			x = x + speed;
 		}
 		
 		if(PacmanX < x) {
 			move(-speed, 0, game.getObjectsToRender());
-			x = x - speed;
 		}
 		
 		if(PacmanY > y) {
 			move(0, speed, game.getObjectsToRender());
-			y = y + speed;
 		}
 		
 		if(PacmanY < y) {
 			move(0, -speed, game.getObjectsToRender());
-			y = y - speed;
 		}
 	}
 	
 	public String getType(){
 		return "ghost";
+	}
+	
+	public void thisCoords() {
+		x = this.getX();
+		y = this.getY();
+	}
+
+	public static void sendCoords(int x2, int y2) {
+		PacmanX = x2;
+		PacmanY = y2;
+		
 	}
 	
 }

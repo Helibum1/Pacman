@@ -34,6 +34,10 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 	 */
 	protected int zIndex;
 	
+	public static String CollType;
+	
+	public static String thisType;
+	
 	/**
 	 * Create a new render object with coordinates.
 	 * 
@@ -59,7 +63,7 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 	 * @param game The current game in which this object is.
 	 */
 	public void update(Game game) {
-		// Default: Do nothing
+		
 	}
 	
 	/**
@@ -132,6 +136,14 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 				
 				if (collision != null) {
 					// There was a collision!
+					
+					thisType = this.getType();
+					
+					CollType = collision.getType();
+					
+					if(thisType == "ghost" && CollType == "wall") {
+						break;
+					}
 					
 					// Move one step back, to the last position, because
 					// there was no collision there.
@@ -272,6 +284,10 @@ public abstract class RenderObject implements Comparable<RenderObject> {
 
 	public String getType() {
 		return null;
+	}
+	
+	public Object getSet() {
+		return this;
 	}
 
 }

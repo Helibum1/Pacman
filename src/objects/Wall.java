@@ -4,7 +4,7 @@ import java.awt.*;
 
 	public class Wall extends ImageObject {
 		
-		private static final int zIndex = 100;
+		private static final int zIndex = 5;
 		
 		private static String PicPath = "Wall.png";
 		

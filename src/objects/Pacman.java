@@ -21,13 +21,12 @@ public class Pacman extends ImageObject {
 	@Override
 	public void update(Game game){
 		
-		//Ghost.sentCoords(x, y);
+		Ghost.sendCoords(this.x,this.y);
 		
 		if (game.getInputHandler().isKeyPressed(KeyEvent.VK_A) ||
 				game.getInputHandler().isKeyPressed(KeyEvent.VK_LEFT) || LastMove == "left") {
 			
 			move(-speed, 0, game.getObjectsToRender());
-			//x = x - speed;
 			LastMove = "left";
 		}
 		
@@ -35,7 +34,6 @@ public class Pacman extends ImageObject {
 				game.getInputHandler().isKeyPressed(KeyEvent.VK_RIGHT) || LastMove == "right") {
 			
 			move(speed, 0, game.getObjectsToRender());
-			//x = x + speed;
 			LastMove = "right";
 		}
 		
@@ -43,7 +41,6 @@ public class Pacman extends ImageObject {
 				game.getInputHandler().isKeyPressed(KeyEvent.VK_DOWN) || LastMove == "down") {
 			
 			move(0, speed, game.getObjectsToRender());
-			//y = y + speed;
 			LastMove = "down";
 		}
 		
@@ -51,21 +48,12 @@ public class Pacman extends ImageObject {
 				game.getInputHandler().isKeyPressed(KeyEvent.VK_UP) || LastMove == "up") {
 			
 			move(0, -speed, game.getObjectsToRender());
-			//y = y + speed;
 			LastMove = "up";
 		}
 	}
 	
 	public String getType() {
 		return "pacman";
-	}
-	
-	public int getX() {
-		return x;
-	}
-	
-	public int getY() {
-		return y;
 	}
 	
 }

@@ -1,7 +1,11 @@
 package pacman;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashSet;
 import java.util.Set;
+
+import javax.swing.Timer;
 
 import ch.ksimlee.it.spaceinvaders.log.Log;
 
@@ -60,9 +64,7 @@ private static final int ACTIONS_PER_SECOND = 30;
 		while (true) {
 			// This loop goes forever, since we don't want our game
 			// logic to stop.
-			
-			// TODO: Add game mechanics here.
-			
+						
 			// Update all game objects.
 			for (RenderObject object : objectsToRender) {
 				object.update(this);
